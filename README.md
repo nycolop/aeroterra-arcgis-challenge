@@ -1,10 +1,17 @@
 # **Aeroterra desafio | Aplicacion Web**
 ## Autor: *Nicolas Lopez*
 
+## **Instrucciones**
+* Doble click al archivo index.html (es decir, abrir el archivo index.html en un navegador) y no requiere más.
+
 ## **Resumen del proyecto**
 ![screenshot](./resources/screenshot.png)
+* Se puede apreciar un mapa.
+* Se pueden agregar punteros con información al mapa desde el formulario hermano.
+* Se pueden seleccionar los punteros en el mapa.
 
 ## **Tecnologias**
+* Tecnologías vanillas
 * HTML5
 * CSS3
 * JavaScript
