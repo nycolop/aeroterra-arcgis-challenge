@@ -47,7 +47,7 @@ section#content {
 }
 
 form {
-    background-color: hsl(0, 0%, 70%);
+    background-color: hsla(0, 0%, 70%, 0.8);
     padding: 25px;
     border-radius: 5px;
     display: flex;
@@ -55,11 +55,12 @@ form {
     justify-content: center;
     align-items: center;
     flex-basis: 30%;
-    box-shadow: rgb(0 0 0 / 10%) 0px 10px 15px -3px, rgb(0 0 0 / 5%) 0px 4px 6px -2px;
+    box-shadow: rgba(129, 102, 102, 0.1) 0px 10px 15px -3px, rgb(0 0 0 / 5%) 0px 4px 6px -2px;
+    border: .1px solid #181616;
 }
 
 form button#submit {
-    background-color: hsl(120, 50%, 45%);
+    background-color: hsla(120, 50%, 45%, 0.74);
     margin-top: 10px;
     color: azure;
     padding: 5px 15px;
@@ -120,6 +121,9 @@ select {
     width: 100%;
     height: 90%;
     box-shadow: rgb(0 0 0 / 10%) 0px 10px 15px -3px, rgb(0 0 0 / 5%) 0px 4px 6px -2px;
+    cursor: pointer;
+    border: .1px solid #181616;
+    border-radius: 3px;
 }
 
 /* Footer */
@@ -138,9 +142,72 @@ footer a {
     color: lightblue;
 }
 
-/* Responsive */
+/* Overlay */
+.overlay {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+.overlay h1 {
+    color: white;
+}
+
+.spinner {
+    display: flex;
+    justify-content: center;
+}
+.spinner::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 10px solid #ddd;
+    border-top-color: blue;
+    border-radius: 50%;
+    animation: spinner 1s linear infinite;
+}
+
+
+
+
+/* Responsive and animations */
 @media screen and (max-width: 600px) {
     section#content {
         flex-direction: column;
+        gap: 0;
+    }
+
+    footer p {
+        text-align: center;
+        padding-left: 0;
+    }
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes jumpIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

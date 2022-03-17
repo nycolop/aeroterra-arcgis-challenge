@@ -10,3 +10,5 @@ const DOMForm = {
     },
     button: document.getElementById('submit')
 }
+
+const DOMoverlay = document.querySelector('div.overlay');

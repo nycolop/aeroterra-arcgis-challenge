@@ -76,4 +76,11 @@ window.addEventListener('load', () => {
         }
     );
 
+    // Loading screen
+    setTimeout(() => {
+        DOMoverlay.style.display = 'none';
+        const content = document.getElementById('content');
+
+        content.style.animation = 'jumpIn 2s';
+    }, 2000);
 })
