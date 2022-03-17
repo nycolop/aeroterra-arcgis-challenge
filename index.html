@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="./src/css/styles.css">
 
     <!-- Loading scripts in defer mode -->
+    <script src="./src/js/DOMSelectors.js" defer></script>
+    <script src="./src/js/formValidation.js" defer></script>
     <script src="./src/js/main.js" defer></script>
 </head>
 <body>
@@ -26,16 +28,19 @@
             <article>
                 <label for="name">Nombre</label>
                 <input type="text" id="name" name="name" placeholder="ej: AEROTERRA S.A." />
+                <small role="alert"></small>
             </article>
 
             <article>
                 <label for="address">Dirección</label>
                 <input type="text" id="address" name="address" placeholder="ej: Av. Eduardo Madero 1020, C1001 CABA" />
+                <small role="alert"></small>
             </article>
 
             <article>
                 <label for="phone">Teléfono</label>
                 <input type="tel" id="phone" name="phone" placeholder="ej: 54 9 11 5272 0900" />
+                <small role="alert"></small>
             </article>
 
             <article>
@@ -46,22 +51,31 @@
                     <option value="residential">Residencial</option>
                     <option value="mixed">Mixta</option>
                 </select>
+                <small role="alert"></small>
             </article>
 
             <article>
                 <p>Coord.</p>
 
-                <label for="coord-x">X</label>
-                <input type="text" id="coord-x" name="coord-x" placeholder="ej: -34.595986" />
+                <article>
+                    <label for="coord-x">X</label>
+                    <input type="text" id="coord-x" name="coord-x" placeholder="ej: -34.595986" />
+                    <small role="alert"></small>
+                </article>
 
-                <label for="coord-y">Y</label>
-                <input type="text" id="coord-y" name="coord-y" placeholder="ej: -58.3724715" />
+                <article>
+                    <label for="coord-y">Y</label>
+                    <input type="text" id="coord-y" name="coord-y" placeholder="ej: -58.3724715" />
+                    <small role="alert"></small>
+                </article>
             </article>
 
-            <button>Agregar</button>
+            <button role="submit" id="submit">Agregar</button>
         </form>
     </main>
 
-    <footer>Aeroterra | Nicolás López · 2022</footer>
+    <footer>
+        <p>Aeroterra | Nicolás López · 2022</p>
+    </footer>
 </body>
 </html>

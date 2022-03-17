@@ -1,0 +1,16 @@
+/* Form Validation */
+
+.validate-success input {
+    border: .1px solid green;
+}
+.validate-error input {
+    border: .1px solid #fe5f55;
+}
+
+form small {
+    visibility: hidden;
+}
+
+.validate-error small {
+    visibility: visible;
+}
