@@ -1,10 +1,17 @@
-/* Form Validation */
+/* Document Styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
 
+/* Form Validation */
 .validate-success input {
-    border: .1px solid green;
+    border: .1px solid lightgreen;
 }
 .validate-error input {
-    border: .1px solid #fe5f55;
+    border: .1px solid red;
 }
 
 form small {
@@ -13,4 +20,126 @@ form small {
 
 .validate-error small {
     visibility: visible;
+    color: red;
+}
+
+/* Probe */
+div#probe {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    flex-basis: 52%;
+}
+
+/* Main styles */
+h1 {
+    text-align: center;
+}
+
+main#app {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section#content {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+
+form {
+    background-color: hsl(0, 0%, 70%);
+    padding: 25px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 30%;
+}
+
+form button#submit {
+    background-color: hsl(120, 50%, 45%);
+    margin-top: 5px;
+    color: azure;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+form input {
+    margin-bottom: 5px;
+    width: 60%;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: hsl(200, 48%, 54%);
+}
+
+form article {
+    width: 100%;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+form article section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form small[role="alert"] {
+    display: block;
+    text-align: center;
+}
+
+#coords {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coord {
+    display: block;
+}
+
+.coord > label {
+    padding-right: 10px;
+}
+
+select {
+    margin-bottom: 5px;
+    width: 65.2%;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: hsl(200, 48%, 54%);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(10deg, #0a0a0a, #181616);
+    box-shadow: 1px 1px 3px 3px black;
+    width: 100%;
+    color: azure;
+}
+
+footer p {
+    padding-left: 10px;
+}
+
+footer a {
+    color: lightblue;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    section#content {
+        flex-direction: column;
+    }
 }

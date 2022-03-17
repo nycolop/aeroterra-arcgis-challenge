@@ -11,6 +11,7 @@
     <title>Aeroterra | Nicolas Lopez</title>
 
     <!-- Loading assets -->
+    <link rel="stylesheet" href="./src/css/assets.css">
     <link rel="stylesheet" href="./src/css/styles.css">
 
     <!-- Loading scripts in defer mode -->
@@ -19,63 +20,81 @@
     <script src="./src/js/main.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Aeroterra Web App</h1>
-    </header>
+    <main id="app">
+        <header>
+            <h1>Aeroterra Web App</h1>
+        </header>
 
-    <main>
-        <form>
-            <article>
-                <label for="name">Nombre</label>
-                <input type="text" id="name" name="name" placeholder="ej: AEROTERRA S.A." />
-                <small role="alert"></small>
-            </article>
-
-            <article>
-                <label for="address">Dirección</label>
-                <input type="text" id="address" name="address" placeholder="ej: Av. Eduardo Madero 1020, C1001 CABA" />
-                <small role="alert"></small>
-            </article>
-
-            <article>
-                <label for="phone">Teléfono</label>
-                <input type="tel" id="phone" name="phone" placeholder="ej: 54 9 11 5272 0900" />
-                <small role="alert"></small>
-            </article>
-
-            <article>
-                <label for="category">Categoría</label>
-                <select id="category" name="category">
-                    <option value="default" selected disabled hidden>Seleccionar</option>
-                    <option value="commercial">Comercial</option>
-                    <option value="residential">Residencial</option>
-                    <option value="mixed">Mixta</option>
-                </select>
-                <small role="alert"></small>
-            </article>
-
-            <article>
-                <p>Coord.</p>
-
+        <section id="content">
+            <form>
                 <article>
-                    <label for="coord-x">X</label>
-                    <input type="text" id="coord-x" name="coord-x" placeholder="ej: -34.595986" />
+                    <section>
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" placeholder="ej: AEROTERRA S.A." />
+                    </section>
                     <small role="alert"></small>
                 </article>
 
                 <article>
-                    <label for="coord-y">Y</label>
-                    <input type="text" id="coord-y" name="coord-y" placeholder="ej: -58.3724715" />
+                    <section>
+                        <label for="address">Dirección</label>
+                        <input type="text" id="address" name="address" placeholder="ej: Av. Eduardo Madero 1020, C1001 CABA" />
+                    </section>
                     <small role="alert"></small>
                 </article>
-            </article>
 
-            <button role="submit" id="submit">Agregar</button>
-        </form>
+                <article>
+                    <section>
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" name="phone" placeholder="ej: 54 9 11 5272 0900" />
+                    </section>
+                    <small role="alert"></small>
+                </article>
+
+                <article>
+                    <section>
+                        <label for="category">Categoría</label>
+                        <select id="category" name="category">
+                            <option value="default" selected disabled hidden>Seleccionar</option>
+                            <option value="commercial">Comercial</option>
+                            <option value="residential">Residencial</option>
+                            <option value="mixed">Mixta</option>
+                        </select>
+                    </section>
+                    <small role="alert"></small>
+                </article>
+
+                <article id="coords">
+                    <p>Coordenadas:</p>
+
+                    <section>
+                        <article>
+                            <section class="coord">
+                                <label for="coord-x">X</label>
+                                <input type="text" id="coord-x" name="coord-x" placeholder="ej: -34.595986" />
+                            </section>
+                            <small role="alert"></small>
+                        </article>
+
+                        <article>
+                            <section class="coord">
+                                <label for="coord-y">Y</label>
+                                <input type="text" id="coord-y" name="coord-y" placeholder="ej: -58.3724715" />
+                            </section>
+                            <small role="alert"></small>
+                        </article>
+                    </section>
+                </article>
+
+                <button role="submit" id="submit">Agregar</button>
+            </form>
+
+            <div id="probe"></div>
+        </section>
+
+        <footer>
+            <p>Aeroterra | Made with love by <a href="https://github.com/necogamy" target="_blank">Nicolás López</a> · 2022</p>
+        </footer>
     </main>
-
-    <footer>
-        <p>Aeroterra | Nicolás López · 2022</p>
-    </footer>
 </body>
 </html>

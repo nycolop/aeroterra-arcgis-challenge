@@ -45,6 +45,8 @@ window.addEventListener('load', () => {
         // Coordenadas Inputs
         if (!values.coordXValue) {
             validateError(DOMForm.coords.coordX, 'Campo requerido');
+        } else if (!Number(values.coordXValue)) {
+            validateError(DOMForm.coords.coordX, 'Debe ser un número');
         } else if (values.coordXValue > 180 || values.coordXValue < -180) {
             validateError(DOMForm.coords.coordX, 'El valor debe ser entre -180 y 180');
         } else {
@@ -53,6 +55,8 @@ window.addEventListener('load', () => {
 
         if (!values.coordYValue) {
             validateError(DOMForm.coords.coordY, 'Campo requerido');
+        } else if (!Number(values.coordYValue)) {
+            validateError(DOMForm.coords.coordY, 'Debe ser un número');
         } else if (values.coordYValue > 90 || values.coordYValue < -90) {
             validateError(DOMForm.coords.coordY, 'El valor debe ser entre -90 y 90');
         } else {
@@ -61,12 +65,12 @@ window.addEventListener('load', () => {
     }
 
     const validateSuccess = input => {
-        const formControl = input.parentElement;
+        const formControl = input.parentElement.parentElement;
         formControl.className = 'validate-success';
     }
 
     const validateError = (input, message) => {
-        const formControl = input.parentElement;
+        const formControl = input.parentElement.parentElement;
         const alert = formControl.querySelector('small');
         alert.innerText = message;
         formControl.className = 'validate-error';
