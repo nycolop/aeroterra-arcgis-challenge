@@ -5,10 +5,14 @@
 * Doble click al archivo index.html (es decir, abrir el archivo index.html en un navegador) y no requiere más.
 
 ## **Resumen del proyecto**
-![screenshot](./resources/screenshot.png)
-* Se puede apreciar un mapa.
+### Desktop
+![screenshot](./resources/screenshot-desktop.png)
+
+### Mobile
+![screenshot](./resources/screenshot-mobile.png)
+* Se puede apreciar un mapa y un formulario.
 * Se pueden agregar punteros con información al mapa desde el formulario hermano.
-* Se pueden seleccionar los punteros en el mapa.
+* Se pueden seleccionar los punteros en el mapa ampliando información del mismo.
 
 ## **Tecnologias**
 * Tecnologías vanillas
