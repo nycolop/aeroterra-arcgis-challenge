@@ -158,6 +158,7 @@ footer a {
     align-items: center;
     justify-content: center;
     gap: 5%;
+    overflow: hidden;
 }
 
 .overlay h1 {
@@ -186,11 +187,22 @@ footer a {
     section#content {
         flex-direction: column;
         gap: 0;
+        overflow-y: scroll;
+        justify-content: space-evenly;
+    }
+
+    main#app {
+        height: 150vh;
+        min-height: 100vh;
     }
 
     footer p {
         text-align: center;
         padding-left: 0;
+    }
+
+    .overlay {
+        height: 150vh;
     }
 }
 
