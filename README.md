@@ -1,6 +1,6 @@
 # **Aeroterra desafio | Aplicacion Web**
 ## Autor: *Nicolas Lopez*
-### [Ver online](https://necogamy.github.io/aeroterra-arcgis-challenge/)
+### [Ver online](https://nycolop.github.io/aeroterra-arcgis-challenge/)
 
 ## **Instrucciones**
 * Doble click al archivo index.html (es decir, abrir el archivo index.html en un navegador) y no requiere más.
